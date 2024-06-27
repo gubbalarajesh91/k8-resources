@@ -1,0 +1,14 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: nginx
+spec:
+  containers: 
+  - name: nginx
+    image: nginx
+    ports:
+    - containerPort: 80 #Default port 80 if not given
+
+#kubectl apply -f 02-pods.yaml
+#kubectl get pods
+#kubectl describe pods <pod name (nginx)>

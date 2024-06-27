@@ -1,0 +1,16 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: multi-container
+spec:
+  containers: 
+  - name: nginx
+    image: nginx
+  - name: alma
+    image: almalinux:9
+    command: ["sleep","2000"]
+
+#kubctl apply -f 03-multi-container.yaml
+#kuberctl exec -it multi-container -c alma -- bash  [To login into container]
+#eksctl delete cluster --config-file=../k8-eksctl/eks.yaml <delete cluster>
+#kubctl delete -f 03-multi-container.yaml

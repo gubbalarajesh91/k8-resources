@@ -1,0 +1,16 @@
+kind: pod
+apiVersion: v1
+metadata:
+  name: labels
+  labels:
+    course: k8
+    trainer: shivakumar
+spec:
+  containers: 
+  - name: nginx
+    image: nginx
+
+#kubectl apply -f <filename>
+#kubectl get pods
+#shows list of pods
+#kubectl describe pod <labels> <-- pods name
