@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: indix
+data:
+  course: "DEVops with AWS"
+  trainer: "sivakumar"
+  github: "https://github.com/gubbalarajesh91/k8-resources.git"
