@@ -6,19 +6,24 @@ spec:
   container:
   - name: nginx
     image: nginx
-    env:
-    - name: course
-      valueFrom:
-        configMapKeyRef:
-          name: indix
-          key: course
-    - name: trainer
-      valueFrom:
-        configMapKeyRef:
-          name: indix
-          key: trainer
-    - name: Repo
-      valueFrom:
-        configMapKeyRef:
-          name: indix
-          key: github
+    # envFrom will place all the key values from configMap
+    envFrom:
+    - configMapKeyRef:
+        name: indix
+
+    # env:
+    # - name: course
+    #   valueFrom:
+    #     configMapKeyRef:
+    #       name: indix
+    #       key: course
+    # - name: trainer
+    #   valueFrom:
+    #     configMapKeyRef:
+    #       name: indix
+    #       key: trainer
+    # - name: Repo
+    #   valueFrom:
+    #     configMapKeyRef:
+    #       name: indix
+    #       key: github
