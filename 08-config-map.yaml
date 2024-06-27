@@ -6,3 +6,6 @@ data:
   course: "DEVops with AWS"
   trainer: "sivakumar"
   github: "https://github.com/gubbalarajesh91/k8-resources.git"
+
+#kubectl get configmap
+#kubectl describe configmap indix
