@@ -11,3 +11,6 @@ spec:
   containers:
   - name: nginx
     image: nginx
+
+#alias ka='kubectl apply -f'
+#ka 12-nginx.yaml
