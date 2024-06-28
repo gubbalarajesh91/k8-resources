@@ -1,8 +1,9 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: nginx-service
+  name: nginx-np
 spec:
+  type: NodePort
   selector:
     name: frontend
     project: expense
@@ -12,8 +13,3 @@ spec:
   - protocol: TCP
     port: 80 # service port like load balancer
     targetPort: 80 #nginx port
-
-#kubectl apply -f 13-service.yaml
-#kubectl get service
-#kubectl describe service nginx
-#kubectl get pods -o wide
