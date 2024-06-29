@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
   name: nginx
-  #these labels belongs to replicaset resource
+  # these labels belongs to replicaset resource
   labels:
     app: nginx
     tier: frontend
@@ -13,9 +13,8 @@ spec:
     matchLabels:
       tier: frontend
       app: nginx
-
-#below is called pod defination
-template:
+  # below is pod definition
+  template:
     metadata:
       labels:
         tier: frontend
@@ -24,7 +23,6 @@ template:
     spec:
       containers:
       - name: nginx
-        image: nginx
-        # - containerPort: 85
+        image: nginx:stable-perl
 
 #kubectl apply -f 16-replicaset.yaml
