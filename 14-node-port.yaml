@@ -11,9 +11,9 @@ spec:
     environment: dev
   ports:
   - protocol: TCP
-    port: 82 # service port like load balancer
-    targetPort: 82 #nginx port
-    nodeport: 32760
+    port: 80 #service-port
+    targetPort: 80 #target-port
+    nodePort: 32760
 
 #kubectl apply -f <filename>
 #kubectl get svc > it will show external and node port and Cluster IP
