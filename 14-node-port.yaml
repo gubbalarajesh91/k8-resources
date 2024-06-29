@@ -11,8 +11,8 @@ spec:
     environment: dev
   ports:
   - protocol: TCP
-    port: 80 # service port like load balancer
-    targetPort: 80 #nginx port
+    port: 82 # service port like load balancer
+    targetPort: 82 #nginx port
     nodeport: 32760
 
 #kubectl apply -f <filename>
