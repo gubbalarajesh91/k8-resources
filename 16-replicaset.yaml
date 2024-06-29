@@ -25,6 +25,7 @@ spec:
       containers:
       - name: nginx
         image: nginx
+        ports:
         - containerPort: 85
 
 # apiVersion: apps/v1
