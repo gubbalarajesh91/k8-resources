@@ -25,4 +25,6 @@ template:
       containers:
       - name: nginx
         image: nginx
-        - containerPort: 85
+        # - containerPort: 85
+
+#kubectl apply -f 16-replicaset.yaml
