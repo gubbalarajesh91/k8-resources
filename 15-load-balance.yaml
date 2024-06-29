@@ -14,3 +14,5 @@ spec:
     port: 80 # service port like load balancer
     targetPort: 80 #nginx port
     nodeport: 32761
+
+#kubectl get pods -o wide
