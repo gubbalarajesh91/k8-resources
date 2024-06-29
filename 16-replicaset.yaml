@@ -15,7 +15,7 @@ spec:
       app: nginx
 
 #below is called pod defination
-template:
+  template:
     metadata:
       labels:
         tier: frontend
@@ -25,7 +25,7 @@ template:
       containers:
       - name: nginx
         image: nginx
-#        - containerPort: 85
+        - containerPort: 85
 
 # apiVersion: apps/v1
 # kind: ReplicaSet
