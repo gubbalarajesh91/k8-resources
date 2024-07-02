@@ -28,3 +28,4 @@ spec:
 
 #kubectl get deployments
 #kubectl get replicaset
+#watch kubectl get pods

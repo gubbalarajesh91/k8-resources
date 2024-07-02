@@ -9,8 +9,8 @@ spec:
     component: frontend
     environment: dev
   ports:
-  - protocol: TCP
-    port: 82 # service port like load balancer
+  - protocol: TCPe
+    port: 82 # service port lik load balancer
     targetPort: 82 #nginx port
 
 #kubectl apply -f 13-service.yaml
