@@ -26,6 +26,20 @@ spec:
       - name: nginx
         image: nginx:stable-perl
 
+kind: Service
+apiVersion: v1
+metadata:
+  name: nginx
+spec:
+  selector:
+    app: nginx
+    tier: web
+    project: test-project
+  ports:
+  - protocol: TCP
+    port: 82 # service port lik load balancer
+    targetPort: 82 #nginx port
+
 #kubectl get deployments
 #kubectl get replicaset
 #watch kubectl get pods
